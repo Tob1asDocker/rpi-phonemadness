@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-armhf
 # Repository 
 ENV REPOSITORY https://github.com/TobiasH87/PRIVATE.telefonwahnsinn
-ENV REPOSITORY_M2_WRAPPER_PROPERTIES https://raw.githubusercontent.com/TobiasH87/docker/master/rpi-phonemadness/maven-wrapper.properties
+ENV REPOSITORY_M2_WRAPPER_PROPERTIES https://raw.githubusercontent.com/TobiasH87Docker/rpi-phonemadness/master/maven-wrapper.properties
 
 # Build Java Application 
 RUN git clone ${REPOSITORY} PhoneMadness/ \
