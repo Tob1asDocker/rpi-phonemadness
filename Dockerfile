@@ -4,7 +4,7 @@ FROM openjdk:8-jdk-alpine AS java-builder
 ENV LANG C.UTF-8
 
 # Repository settings
-ENV REPOSITORY https://github.com/TobiasH87/de.hs-mainz.telefonwahnsinn
+ENV REPOSITORY https://github.com/Tob1as/de.hs-mainz.telefonwahnsinn
 
 # build
 RUN git clone ${REPOSITORY} /telefonwahnsinn/
