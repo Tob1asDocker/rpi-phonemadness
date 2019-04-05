@@ -14,8 +14,8 @@ RUN cd /telefonwahnsinn \
 	&& ./mvnw clean package
 
 # Pull image to run the application
-#FROM balenalib/raspberry-pi-openjdk:openjdk-8-jdk
-FROM balenalib/raspberry-pi-alpine-openjdk:openjdk-8-jdk
+#FROM balenalib/raspberry-pi-openjdk:8-jre-latest
+FROM balenalib/raspberry-pi-alpine-openjdk:8-jre-latest
 
 LABEL maintainer="Tobias Hargesheimer <docker@ison.ws>"
 LABEL description="TelefonWahnsinn (PhoneMadness): \
