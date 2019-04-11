@@ -1,4 +1,5 @@
 # Pull image to build java file with maven
+#FROM balenalib/raspberry-pi-alpine-openjdk:8-jdk-latest AS java-builder
 FROM openjdk:8-jdk-alpine AS java-builder
 
 ENV LANG C.UTF-8
@@ -15,7 +16,8 @@ RUN cd /telefonwahnsinn \
 
 # Pull image to run the application
 #FROM balenalib/raspberry-pi-openjdk:8-jre-latest
-FROM balenalib/raspberry-pi-alpine-openjdk:8-jre-latest
+#FROM balenalib/raspberry-pi-alpine-openjdk:8-jre-latest
+FROM arm32v7/openjdk:8-jre-alpine
 
 LABEL maintainer="Tobias Hargesheimer <docker@ison.ws>"
 LABEL description="TelefonWahnsinn (PhoneMadness): \
